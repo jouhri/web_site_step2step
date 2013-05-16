@@ -65,8 +65,10 @@ a.button, .inline-list a
 	box-shadow: 2px 2px 2px rgba(44, 62, 80,1.0);
 }
 
-.image_android
+#image_android
 {
-	height: 300px;
-	width:  400px;
+	height: 170px;
+	width:  300px;
+	border: solid;
+	box-shadow: 2px 2px 2px rgba(44, 62, 80,1.0);
 }
