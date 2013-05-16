@@ -35,3 +35,12 @@
   <!-- End Feed Entry -->
   </article>
 </div>
+
+
+<%= form_tag(:controller => "users", :action => "compare") do %>
+<%= label_tag(:email, "Email") %>
+<%= hidden_field_tag(:id, @user.id) %>
+<%= text_field_tag(:email) %>
+<%= date_select(:date, :start_year => "2013", :end_year => "2014", :order => [:month, :day, :year], :use_short_month) %>
+<%= submit_tag("Go !") %>
+<% end %>
