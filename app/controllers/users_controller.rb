@@ -1,30 +1,32 @@
+ $LOAD_PATH << "/var/lib/gems/1.8/gems/awesome_print-1.1.0/lib/"
+require "awesome_print"
+
+
 class UsersController < ApplicationController
-private
-  def get_results
-    
-  end
 
 public
   def compare
     @test = true
     begin
       #fill in the Hash with the average/total results for the user 1
-      @user1 = {}
-      @user1[:distance] = User.find(params[:id]).trainings.sum('distance').round(2)
-      @user1[:calories] = User.find(params[:id]).trainings.sum('calories').round(2)
-      @user1[:speed] = User.find(params[:id]).trainings.average('speed').round(2)
-      @user1[:email] = User.find(params[:id]).email
-
-      #fill in the Hash with the average/total results for the user 2
-      @user2 = {}
-      @user2[:distance] = User.find_by_email(params[:email]).
-        trainings.sum('distance').round(2)
-      @user2[:calories] = User.find_by_email(params[:email]).
-                                trainings.sum('calories').round(2)
-      @user2[:speed] = User.find_by_email(params[:email]).
-        trainings.average('speed').round(2)
-      @user2[:email] = User.find_by_email(params[:email]).email
+      time = Time.utc(params[:date]['date1(1i)'].to_i,
+                      params[:date]['date1(2i)'],
+                    params[:date]['date1(3i)'].to_i,0,0,1)
+      query1 = User.find_by_(time).first
       
+      @user1 = {}
+      @user1[:distance] = query1.trainings.sum('distance').round(2)
+      @user1[:calories] = query1.trainings.sum('calories').round(2)
+      @user1[:speed] = query1.trainings.average('speed').round(2)
+      @user1[:email] = query1.email
+      
+      #fill in the Hash with the average/total results for the user 2
+      query2 = User.find_by_email(params[:email]).where('created_at', time)
+      @user2 = {}
+      @user2[:distance] = query2.trainings.sum('distance').round(2)
+      @user2[:calories] = query2.trainings.sum('calories').round(2)
+      @user2[:speed] = query2.trainings.average('speed').round(2)
+      @user2[:email] = query2.email
     rescue
       @test = false
     end
@@ -69,5 +71,4 @@ public
       end
     end
   end
-  
 end
