@@ -1,0 +1,64 @@
+<div class="small-4 columns small-centered">
+  <h1 class="title"><b>Step 2 Step</b></h1>
+</div>
+</header>
+
+<br/><br/>
+
+<div id="my-article">
+  <article class="small-8 columns small-centered results">
+    <!-- Feed Entry -->
+    <div class="attributes thumbnail-large result">
+      <h1 id="title" class="large-4 columns"><i><%= @user1[:email] %></i></h1>
+      <h1 id="date" class="large-5 columns"><%= Time.now.to_s.delete("+0200") %></h1>
+      <div class="row">
+	<div class="large-12 columns">
+	  <div class="attributes thumbnail">
+	    <h1>Distance</h1>
+	    <h2><%= @user1[:distance] %></h2>
+	  </div>
+	  <div class="attributes thumbnail">
+	    <h1>Calories</h1>
+	    <h2><%= @user1[:calories] %></h2>
+	  </div>
+	  <div class="attributes thumbnail">
+	    <h1>Speed</h1>
+	    <h2><%= @user1[:speed] %></h2>
+	  </div>
+	  
+	</div>
+      </div>
+    </div>
+  <!-- End Feed Entry -->
+  </article>
+</div>
+
+<br/><hr/><br/>
+
+<div id="my-article">
+  <article class="small-8 columns small-centered results">
+    <!-- Feed Entry -->
+    <div class="attributes thumbnail-large result">
+      <h1 id="title" class="large-4 columns"><i><%= @user2[:email] %></i></h1>
+      <h1 id="date" class="large-5 columns"><%= Time.now.to_s.delete("+0200") %></h1>
+      <div class="row">
+	<div class="large-12 columns">
+	  <div class="attributes thumbnail">
+	    <h1>Distance</h1>
+	    <h2><%= @user2[:distance] %></h2>
+	  </div>
+	  <div class="attributes thumbnail">
+	    <h1>Calories</h1>
+	    <h2><%= @user2[:calories] %></h2>
+	  </div>
+	  <div class="attributes thumbnail">
+	    <h1>Speed</h1>
+	    <h2><%= @user2[:speed] %></h2>
+	  </div>
+	  
+	</div>
+      </div>
+    </div>
+  <!-- End Feed Entry -->
+  </article>
+</div>

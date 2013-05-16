@@ -8,15 +8,14 @@ TestDeviseAndRABL::Application.routes.draw do
   devise_for :users
 
   resources :users do
-    get 'helloworld', :on => :collection
-    get 'webs_sign_in', :on => :collection
+    get 'compare', :on => :collection
+    get 'show', :on => :collection
     get 'webs_add_training', :on => :collection
   end
 
   resources :trainings
-
-  match "/users/:helloworld" => "users#helloworld", :as => "helloworld", :via => [:post, :get]
-  match "/users:webs_sign_in" => "users#webs_sign_in", :as => "webs_sign_in", :via => [:post, :get]
+  match "/users/:compare" => "users#compare", :as => "compare", :via => [:post, :get]
+  match "/users/:show/:id" => "users#show", :as => "show", :via => [:post, :get]
   match "/users:webs_add_training" => "users#webs_add_training", :as => "webs_add_training", :via => [:post, :get]
 
   # The priority is based upon order of creation:

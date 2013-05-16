@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(:version => 20130512115909) do
   create_table "trainings", :force => true do |t|
     t.string   "distance"
     t.string   "calories"
+    t.string   "title"
+    t.string   "speed"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"

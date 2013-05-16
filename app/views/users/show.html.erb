@@ -1,0 +1,45 @@
+<div class="small-4 columns small-centered">
+  <h1 class="title"><b>Step 2 Step</b></h1>
+</div>
+</header>
+
+<br/><br/>
+
+<div id="my-article">
+  <article class="small-8 columns small-centered results">
+    <% @user.trainings.each do |training| %>
+
+  <!-- Feed Entry -->
+  <div class="attributes thumbnail-large result">
+    <h1 id="title" class="large-4 columns"><i><%= training.title.upcase %></i></h1>
+    <h1 id="date" class="large-5 columns"><%= training.created_at.to_s.delete("UTC") %></h1>
+    <div class="row">
+      <div class="large-12 columns">
+	<div class="attributes thumbnail">
+	  <h1>Distance</h1>
+	  <h2><%= training.distance %></h2>
+	</div>
+	<div class="attributes thumbnail">
+	  <h1>Calories</h1>
+	  <h2><%= training.calories %></h2>
+	</div>
+	<div class="attributes thumbnail">
+	  <h1>Speed</h1>
+	  <h2><%= training.speed %></h2>
+	</div>
+	
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <!-- End Feed Entry -->
+  </article>
+</div>
+
+
+<%= form_tag(:controller => "users", :action => "compare") do %>
+<%= label_tag(:email, "Email") %>
+<%= hidden_field_tag(:id, @user.id) %>
+<%= text_field_tag(:email) %>
+<%= submit_tag("Go !") %>
+<% end %>

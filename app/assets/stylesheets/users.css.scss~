@@ -1,0 +1,151 @@
+@font-face
+{
+    font-family: 'amble-regular';
+    src: url('font/Amble-Regular-webfont.eot') format('eot'),
+    url('font/Amble-Regular-webfont.woff') format('woff'),
+    url('font/Amble-Regular-webfont.ttf') format('truetype'),
+    url('font/Amble-Regular-webfont.svg') format('svg');
+}
+
+@font-face
+{
+
+    font-family:'sansita-one';
+    src: url('font/Amble-Regular-webfont.eot') format('eot'),
+    url('font/Amble-Regular-webfont.woff') format('woff'),
+    url('font/Amble-Regular-webfont.ttf') format('truetype'),
+    url('font/Amble-Regular-webfont.svg') format('svg');
+}
+
+@font-face
+{
+    font-family: 'alegreya-regular';
+    src: url('font/Alegreya-Regular-webfont.eot') format('eot'),
+    url('font/Alegreya-Regular-webfont.woff') format('woff'),
+    url('font/Alegreya-Regular-webfont.ttf') format('truetype'),
+    url('font/Alegreya-Regular-webfont.svg') format('svg');
+}
+
+@font-face
+{
+    font-family: 'plump';
+    src: url('font/PLUMP-webfont.eot') format('eot'),
+    url('font/PLUMP-webfont.woff') format('woff'),
+    url('font/PLUMP-webfont.ttf') format('truetype'),
+    url('font/PLUMP-webfont.svg') format('svg');
+}
+
+header h1.title
+{
+    font-size:3.3em;
+    font-family:'sansita-one';
+    margin:auto;
+    padding:20px;
+    text-align:center;
+}
+
+
+article h1#title
+{
+    font-weight:bold;
+    font-family:'sansita-one';
+    z-index:1;
+    position:relative;
+    left:-1%;
+    top:-34px;
+    background-color:#E67E22;
+    color:whitesmoke;
+    padding:10px;
+    text-align:center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0,0.2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0,0.3);
+    display:inline-block;
+}
+
+article h1#date
+{
+    color:green;
+    text-align:center;
+}
+
+.result
+{
+    z-index:2;
+    padding-top:-20px;
+}
+
+.thumbnail h1
+{
+    background-color:#bdc3c7;
+    color:green;
+}
+
+.attributes
+{
+    border-radius:4px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0,0.4);
+}
+
+.thumbnail-large
+{
+    background-color:#FEFEFE;
+    margin-bottom:40px;
+}
+
+.thumbnail
+{
+    background-color:whitesmoke;
+    display:inline-block;
+    text-align:center;
+    color:black;
+    margin:20px;
+    width:200px;
+    height:150px;
+}
+
+article .results
+{
+    border-radius:4px;
+    background-color:whitesmoke;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0,0.4);
+
+    text-align:center;
+}
+
+.my-article
+{
+    margin-top:20px;
+}
+
+.papers
+{
+  background-color: white;
+  height: 350px;
+  padding: 20px;
+  width: 260px;
+  -webkit-box-shadow: 
+        1px 1px   0 rgba(0,   0,   0,   0.100), 
+        3px 3px   0 rgba(255, 255, 255, 1.0), 
+        4px 4px   0 rgba(0,   0,   0,   0.125), 
+        6px 6px   0 rgba(255, 255, 255, 1.0),  
+        7px 7px   0 rgba(0,   0,   0,   0.150), 
+        9px 9px   0 rgba(255, 255, 255, 1.0),  
+        10px 10px 0 rgba(0,   0,   0,   0.175);
+  -moz-box-shadow: 
+        1px 1px   0 rgba(0,   0,   0,   0.100), 
+        3px 3px   0 rgba(255, 255, 255, 1.0), 
+        4px 4px   0 rgba(0,   0,   0,   0.125), 
+        6px 6px   0 rgba(255, 255, 255, 1.0),  
+        7px 7px   0 rgba(0,   0,   0,   0.150), 
+        9px 9px   0 rgba(255, 255, 255, 1.0),  
+        10px 10px 0 rgba(0,   0,   0,   0.175);
+  box-shadow: 
+        1px 1px   0 rgba(0,   0,   0,   0.100), 
+        3px 3px   0 rgba(255, 255, 255, 1.0), 
+        4px 4px   0 rgba(0,   0,   0,   0.125), 
+        6px 6px   0 rgba(255, 255, 255, 1.0),  
+        7px 7px   0 rgba(0,   0,   0,   0.150), 
+        9px 9px   0 rgba(255, 255, 255, 1.0),  
+        10px 10px 0 rgba(0,   0,   0,   0.175);
+    
+}

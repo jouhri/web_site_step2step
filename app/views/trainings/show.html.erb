@@ -1,3 +1,4 @@
+</header>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,6 +11,18 @@
   <%= @training.calories %>
 </p>
 
+<table>
+    <tr>
+      <td><b>Distance</b></td>
+      <td><b>Calories</b></td>
+    </tr>
+    <% @user.trainings.each do |training| %>
+    <tr>
+      <td><%= training.distance %></td>
+      <td><%= training.calories %></td>
+    </tr>
+    <% end %>
+</table>
 
 <%= link_to 'Edit', edit_training_path(@training) %> |
 <%= link_to 'Back', trainings_path %>
