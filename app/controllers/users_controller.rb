@@ -1,7 +1,3 @@
- $LOAD_PATH << "/var/lib/gems/1.8/gems/awesome_print-1.1.0/lib/"
-require "awesome_print"
-
-
 class UsersController < ApplicationController
 
 public
