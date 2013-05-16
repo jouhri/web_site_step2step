@@ -41,8 +41,5 @@
 <%= label_tag(:email, "Email") %>
 <%= hidden_field_tag(:id, @user.id) %>
 <%= text_field_tag(:email) %>
-
-<%= date_select(:date, :date1, {:order => [:year, :month, :day], :use_month_number => true} ) %>
-
 <%= submit_tag("Go !") %>
 <% end %>
