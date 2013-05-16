@@ -10,12 +10,9 @@
 	<!-- Header and Nav -->
 	<header>
 		<div class="row">
-		  <div class="large-3 columns">
-		    <h1>S2S</h1>
-		  </div>
 		  <div class="large-9 columns">
 		    <ul class="button-group right">
-		    <li><a href="#" data-reveal-id="myModal">Click Me For A Modal</a></li>
+  		      <li><%= link_to('Home', root_path, :class => "button" ) %></li>
 		      <% if user_signed_in? %>
 				  <li>
 				  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
@@ -25,15 +22,14 @@
 				  <%= link_to('Login', new_user_session_path, :class => "button")  %>  
 				  </li>
 				<% end %>
-		      <li><a href="#" class="button">TEAM</a></li>
-		      <li><a href="#" class="button">CONTACT</a></li>
 		    </ul>
 		  </div>
 		</div>
-
-	<!-- End Header and Nav -->
-<%= yield %>
-
+	<div class="small-4 columns small-centered">
+	  <h1 class="title"><b>Step 2 Step</b></h1>
+	</div>
+	<%= yield %>
+	</section>
 	 <!-- Footer -->
 
 	<footer class="row">
@@ -45,10 +41,6 @@
 	        </div>
 	        <div class="large-6 columns">
 	          <ul class="inline-list right">
-	            <li><a href="#">Link 1</a></li>
-	            <li><a href="#">Link 2</a></li>
-	            <li><a href="#">Link 3</a></li>
-	            <li><a href="#">Link 4</a></li>
 	          </ul>
 	        </div>
 	      </div>
